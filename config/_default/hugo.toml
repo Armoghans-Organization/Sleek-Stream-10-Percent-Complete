@@ -1,0 +1,9 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Sleek Stream'
+
+[module]
+
+[module.hugoVersion]
+extended = false
+min = "v0.116.0"
