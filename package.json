@@ -1,0 +1,26 @@
+{
+  "name": "sleek-stream",
+  "version": "1.0.0",
+  "description": "Hugo-powered website theme for blogs, portfolios, summery and content manager using TailwindCss.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Hugo",
+    "TailwindCss",
+    "Custom",
+    "Theme",
+    "Custom Theme",
+    "Template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Armoghans-Organization/Sleek-Stream.git"
+  },
+  "author": "Armoghan-ul-Mohmin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Armoghans-Organization/Sleek-Stream/issues"
+  },
+  "homepage": "https://github.com/Armoghans-Organization/Sleek-Stream#readme"
+}
