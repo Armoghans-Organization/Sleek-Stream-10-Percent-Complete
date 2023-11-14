@@ -10,7 +10,7 @@
 /* see https://tailwindcss.com/docs/functions-and-directives#layer */
 @layer components {
     .light-mode {
-        @apply bg-gradient-to-r from-purple-300 to-blue-200 text-slate-600;
+        @apply bg-gradient-to-r from-purple-300 to-blue-200 text-slate-700;
     }
 
     .dark-mode {
@@ -22,7 +22,7 @@
     }
 
     .dark-nav {
-        @apply bg-gradient-to-r from-purple-200 to-blue-300 text-slate-600;
+        @apply bg-gradient-to-r from-purple-200 to-blue-300 text-slate-900;
     }
 
     .welcome-headline {
