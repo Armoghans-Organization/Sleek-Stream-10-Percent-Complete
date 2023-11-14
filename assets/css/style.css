@@ -8,3 +8,24 @@
 /* Site Specific */
 /* put site specific css styles here using the @layer directive */
 /* see https://tailwindcss.com/docs/functions-and-directives#layer */
+@layer components {
+    .light-mode {
+        @apply bg-gradient-to-r from-purple-300 to-blue-200 text-slate-600;
+    }
+
+    .dark-mode {
+        @apply bg-gradient-to-r from-gray-800 to-gray-600 text-white;
+    }
+
+    .light-nav {
+        @apply bg-white border-gray-200;
+    }
+
+    .dark-nav {
+        @apply bg-gradient-to-r from-purple-200 to-blue-300 text-slate-600;
+    }
+
+    .welcome-headline {
+        @apply text-sky-600;
+    }
+}
