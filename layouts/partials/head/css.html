@@ -1,6 +1,5 @@
 {{- with resources.Get "css/style.css" | postCSS (dict "config" "./assets/css/postcss.config.js") }}
 <!-- Check if the main.css resource exists -->
-
 {{- if eq hugo.Environment "development" }}
 <!-- In development environment, use the plain CSS without minification or fingerprinting -->
 <link rel="stylesheet" href="{{ .RelPermalink }}">
@@ -12,3 +11,7 @@
 {{- end }}
 {{- end }}
 {{- end }}
+
+<!-- Fontawsome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-..." , crossorigin="anonymous">
