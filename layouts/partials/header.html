@@ -15,18 +15,19 @@
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                 <!-- Search Button -->
                 {{ if .Site.Params.enableSearch }}
-                <button id="search-button" class="mx-3 px-3">
+                <button id="search-button" class="mx-3 px-3" aria-label="Search">
                     <i class="fas fa-search"></i>
                 </button>
                 {{ end }}
 
                 <!-- Theme Switcher Button -->
                 {{ if .Site.Params.themeSwitcher }}
-                <button id="theme-toggle">
+                <button id="theme-toggle" aria-label="Toggle Theme">
                     <span id="moon"><i class="fas fa-moon"></i></span>
                     <span id="sun" class="hidden"><i class="fas fa-sun"></i></span>
                 </button>
                 {{ end }}
+
 
                 <!-- Mobile Menu Toggle Button -->
                 <button data-collapse-toggle="navbar-cta" type="button"
@@ -53,13 +54,13 @@
     class="hidden mt-4 flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
     <!-- Header with search input and close button -->
     <header class="relative z-10 flex items-center justify-between flex-none px-2">
-        <form class="flex items-center flex-auto min-w-0">
+        <form action="/search" method="GET" class="flex items-center flex-auto min-w-0">
             <!-- Search icon -->
-            <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+            <button type="submit" class="flex items-center justify-center w-8 h-8 text-neutral-400">
                 <i class="fas fa-search"></i>
-            </div>
+            </button>
             <!-- Search input field -->
-            <input type="search" id="search-query"
+            <input type="search" id="search-query" name="q"
                 class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
                 placeholder="Search" tabindex="0" />
         </form>
