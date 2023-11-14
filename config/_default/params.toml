@@ -1,1 +1,3 @@
-# Logo = "/images/logo.png"
+Logo = false
+themeSwitcher = true
+enableSearch = true
