@@ -2,3 +2,5 @@ Logo = false
 description = "Example Site"
 themeSwitcher = true
 enableSearch = true
+showFootermenu = true
+showCopyright = true
