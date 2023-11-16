@@ -4,13 +4,9 @@
   "description": "Hugo-powered website theme for blogs, portfolios, summery and content manager using TailwindCss.",
   "scripts": {
     "npm-check": "npm-check -u",
-    "fullinstall": "npm run preinstall && npm install && npm run postinstall",
-    "preinstall": "rimraf assets/vendor",
-    "postinstall": "vendor-copy",
-    "assets": "rimraf assets/vendor && vendor-copy",
     "start": "hugo server --buildDrafts --buildFuture --buildExpired --gc --ignoreCache --noBuildLock --logLevel info",
     "watch": "hugo server --buildDrafts --buildFuture --buildExpired --gc --ignoreCache --noBuildLock --logLevel info --watch",
-    "build": "hugo --gc --verbose --cleanDestinationDir"
+    "build": "hugo --gc --verbose --cleanDestinationDir --minify"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.x",
@@ -22,11 +18,7 @@
     "tailwindcss": "^3.x"
   },
   "devDependencies": {
-    "fuse.js": "^7.0.0",
-    "mark.js": "^8.11.1",
-    "npm-check": "^6.0.1",
-    "rimraf": "^5.0.5",
-    "vendor-copy": "^3.0.1"
+    "npm-check": "^6.0.1"
   },
   "keywords": [
     "Hugo",
@@ -56,16 +48,5 @@
     "Firefox ESR",
     "iOS >= 9",
     "Android >= 4.4"
-  ],
-  "vendorCopy": [],
-  "devVendorCopy": [
-    {
-      "from": "node_modules/fuse.js/dist/fuse.min.js",
-      "to": "assets/vendor/fuse.js"
-    },
-    {
-      "from": "node_modules/mark.js/dist/mark.min.js",
-      "to": "assets/vendor/mark.js"
-    }
   ]
 }
