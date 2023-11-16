@@ -1,5 +1,15 @@
-{{- $.Scratch.Add "index" slice -}}
-{{- range .Site.RegularPages -}}
-    {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "contents" .Plain "permalink" .Permalink) -}}
+{{- $index := slice -}}
+{{- range .Site.Pages -}}
+  {{- $section := .Site.GetPage "section" .Section -}}
+  {{- $index = $index | append (dict
+    "date" (.Date | time.Format (.Site.Language.Params.dateFormat | default ":date_long")) 
+    "title" (.Title | emojify | safeJS)
+    "section" ($section.Title | emojify | safeJS)
+    "summary" (.Summary | emojify | safeJS)
+    "permalink" .RelPermalink
+    "categories" .Params.categories
+ "author" .Params.author
+"tags" .Params.tags
+  ) -}}
 {{- end -}}
-{{- $.Scratch.Get "index" | jsonify -}}
+{{- $index | jsonify -}}
